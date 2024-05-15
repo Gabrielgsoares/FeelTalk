@@ -3,10 +3,11 @@
 
 from pathlib import Path
 from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
+from guiExpressions import open_expressions_window
 
 # Definindo os caminhos de saída e ativos
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path("assets/frame0")  # Removendo o '/view/' do caminho
+ASSETS_PATH = OUTPUT_PATH / Path("assets/frame0")  
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
@@ -72,7 +73,7 @@ button_1 = Button(
     image=button_image_1,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_1 clicked"),
+    command=lambda: open_expressions_window(window),
     relief="flat"
 )
 button_1.place(
@@ -87,85 +88,85 @@ canvas.create_text(
     334.0,
     8.0,
     anchor="nw",
-    text="o QUE DESEJA COMUNICAR?",
+    text="O que deseja comunicar?",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 40 * -1)
 )
 
 canvas.create_text(
-    202.0,
+    105.0,
     307.0,
     anchor="nw",
-    text="cOMUNICAÇÃO",
+    text="COMUNICAÇÃO",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 20 * -1)
 )
 
 canvas.create_text(
-    717.0,
+    691.0,
     307.0,
     anchor="nw",
-    text="eXPRESSÕES",
+    text="EXPRESSÕES",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 20 * -1)
 )
 
 canvas.create_text(
-    463.0,
+    420.0,
     458.0,
     anchor="nw",
-    text="rESPOSTAS RÁPIDAS",
+    text="RESPOSTAS RÁPIDAS",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 20 * -1)
 )
 
 canvas.create_text(
-    547.0,
+    531.0,
     307.0,
     anchor="nw",
-    text="tECLADO",
+    text="TECLADO",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 20 * -1)
 )
 
 canvas.create_text(
-    648.0,
+    697.0,
     458.0,
     anchor="nw",
-    text="pALAVRAS BASICAS",
+    text="PALAVRAS BASICAS",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 20 * -1)
 )
 
 canvas.create_text(
-    219.0,
+    90.0,
     458.0,
     anchor="nw",
-    text="sAUDAÇÕES E fORMALIDADES",
+    text="SAUDAÇÕES E FORMALIDADES",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 20 * -1)
 )
 
 canvas.create_text(
-    363.0,
+    311.0,
     307.0,
     anchor="nw",
-    text="nECESSIDADE",
+    text="NECESSIDADES",
     fill="#FFFFFF",
     font=("BebasNeue Regular", 20 * -1)
 )
 
 button_image_2 = PhotoImage(
     file=relative_to_assets("button_2.png"))
-button_2 = Button(
+button_comunicacao = Button(
     image=button_image_2,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_2 clicked"),
+    command=lambda: print("button_comunicacao clicked"),
     relief="flat"
 )
-button_2.place(
-    x=202.0,
+button_comunicacao.place(
+    x=132.0,
     y=206.0,
     width=94.0,
     height=95.0
@@ -197,7 +198,7 @@ button_4 = Button(
     relief="flat"
 )
 button_4.place(
-    x=264.0,
+    x=185.0,
     y=357.0,
     width=94.0,
     height=95.0
@@ -229,7 +230,7 @@ button_6 = Button(
     relief="flat"
 )
 button_6.place(
-    x=659.0,
+    x=738.0,
     y=357.0,
     width=94.0,
     height=95.0
@@ -237,15 +238,15 @@ button_6.place(
 
 button_image_7 = PhotoImage(
     file=relative_to_assets("button_7.png"))
-button_7 = Button(
+button_necessidade = Button(
     image=button_image_7,
     borderwidth=0,
     highlightthickness=0,
-    command=lambda: print("button_7 clicked"),
+    command=lambda: print("button_necessidade clicked"),
     relief="flat"
 )
-button_7.place(
-    x=357.0,
+button_necessidade.place(
+    x=337.0,
     y=206.0,
     width=94.0,
     height=95.0

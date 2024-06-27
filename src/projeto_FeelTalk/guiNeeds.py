@@ -6,7 +6,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 # Definindo os caminhos de saída e ativos
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path("assets/frame1") 
+ASSETS_PATH = OUTPUT_PATH / Path("assets/frame2") 
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
@@ -21,77 +21,77 @@ def center_window(window, width=1001, height=561):
     window.geometry(f'{width}x{height}+{int(x)}+{int(y)}')
 
 # Função para abrir a janela
-def open_expressions_window():
+def open_needs_window():
 
-    expressions_window = Tk()
-    expressions_window.geometry("1001x561")
-    expressions_window.configure(bg="#FFFFFF")
+    needs_window = Tk()
+    needs_window.geometry("1001x561")
+    needs_window.configure(bg="#FFFFFF")
     
     # Centraliza a janela
-    center_window(expressions_window)
+    center_window(needs_window)
 
-    def set_surpreso():
+    def set_ajuda():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "SURPRESO")  # Insere o novo texto
+        entry_1.insert("1.0", "AJUDA")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
         
-    def set_triste():
+    def set_comida():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "TRISTE")  # Insere o novo texto
+        entry_1.insert("1.0", "COMIDA")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
 
-    def set_feliz():
+    def set_bebida():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "FELIZ")  # Insere o novo texto
+        entry_1.insert("1.0", "BEBIDA")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
         
-    def set_medo():
+    def set_banheiro():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "MEDO")  # Insere o novo texto
+        entry_1.insert("1.0", "BANHEIRO")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
         
-    def set_estressado():
+    def set_dor():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "ESTRESSADO")  # Insere o novo texto
+        entry_1.insert("1.0", "DOR")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
         
-    def set_apaixado():
+    def set_descanso():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "APAIXONADO")  # Insere o novo texto
+        entry_1.insert("1.0", "DESCANSO")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
         
-    def set_enjoado():
+    def set_comunicacao():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "ENJOADO")  # Insere o novo texto
+        entry_1.insert("1.0", "COMUNICAÇÃO")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
     
-    def set_indignado():
+    def set_atividade():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
-        entry_1.insert("1.0", "INDIGNADO")  # Insere o novo texto
+        entry_1.insert("1.0", "ATIVIDADE")  # Insere o novo texto
         entry_1.tag_configure("big", font=("Helvetica", 24)) # Configura a fonte maior
         entry_1.tag_add("big", "1.0", "end") # Aplica a tag “big” a todo o texto
         
     def set_apagar():
         entry_1.delete("1.0", "end")  # Limpa o conteúdo existente
         
-    # Criando o canvas
     canvas = Canvas(
-        expressions_window,
-        bg="#FFFFFF",
-        height=561,
-        width=1001,
-        bd=0,
-        highlightthickness=0,
-        relief="ridge"
+        needs_window,
+        bg = "#FFFFFF",
+        height = 561,
+        width = 1001,
+        bd = 0,
+        highlightthickness = 0,
+        relief = "ridge"
     )
-    canvas.place(x=0, y=0)
+
+    canvas.place(x = 0, y = 0)
     canvas.create_rectangle(
         0.0,
         0.0,
@@ -100,6 +100,7 @@ def open_expressions_window():
         fill="#73A5B1",
         outline=""
     )
+
     canvas.create_rectangle(
         0.0,
         0.0,
@@ -135,100 +136,99 @@ def open_expressions_window():
         421.0,
         8.0,
         anchor="nw",
-        text="Expressões",
+        text="Necessidades",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 40 * -1)
     )
 
     canvas.create_text(
-        160.0,
+        180.0,
         335.0,
         anchor="nw",
-        text="SURPRESO",
+        text="AJUDA",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
 
     canvas.create_text(
-        371.0,
+        365.0,
         335.0,
         anchor="nw",
-        text="TRISTE",
+        text="COMIDA",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
 
     canvas.create_text(
-        566.0,
+        564.0,
         335.0,
         anchor="nw",
-        text="FELIZ",
+        text="BEBIDA",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
 
     canvas.create_text(
-        771.0,
-        334.0,
+        751.0,
+        335.0,
         anchor="nw",
-        text="MEDO",
+        text="BANHEIRO",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
 
     canvas.create_text(
-        745.0,
+        726.0,
         498.0,
         anchor="nw",
-        text="INDIGNADO",
+        text="COMUNICAÇÃO",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
 
     canvas.create_text(
-        338.0,
+        352.0,
         498.0,
         anchor="nw",
-        text="APAIXONADO",
+        text="DESCANSO",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
 
     canvas.create_text(
-        147.0,
+        189.0,
         498.0,
         anchor="nw",
-        text="ESTRESSADO",
+        text="DOR",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
 
     canvas.create_text(
-        548.0,
+        546.0,
         498.0,
         anchor="nw",
-        text="ENJOADO",
+        text="ATIVIDADE",
         fill="#FFFFFF",
         font=("BebasNeue Regular", 20 * -1)
     )
     
     # Criando botões
-    button_image_medo = PhotoImage(
+    button_image_banheiro = PhotoImage(
         file=relative_to_assets("button_1.png"))
-    button_medo = Button(
-        image=button_image_medo,
+    button_banheiro = Button(
+        image=button_image_banheiro,
         borderwidth=0,
         highlightthickness=0,
-        command=set_medo,
+        command=set_banheiro,
         relief="flat"
     )
-    button_medo.place(
+    button_banheiro.place(
         x=750.0,
         y=233.0,
         width=94.0,
         height=95.0
     )
-
 
     button_image_config = PhotoImage(
         file=relative_to_assets("button_2.png"))
@@ -236,7 +236,7 @@ def open_expressions_window():
         image=button_image_config,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button_config clicked"),
+        command=lambda: print("button_2 clicked"),
         relief="flat"
     )
     button_config.place(
@@ -278,112 +278,112 @@ def open_expressions_window():
         height=77.0
     )
 
-    button_image_feliz = PhotoImage(
+    button_image_bebida = PhotoImage(
         file=relative_to_assets("button_5.png"))
-    button_feliz = Button(
-        image=button_image_feliz,
+    button_bebida = Button(
+        image=button_image_bebida,
         borderwidth=0,
         highlightthickness=0,
-        command=set_feliz,
+        command=set_bebida,
         relief="flat"
     )
-    button_feliz.place(
+    button_bebida.place(
         x=547.0,
         y=233.0,
         width=94.0,
         height=95.0
     )
 
-    button_image_triste = PhotoImage(
+    button_image_comida = PhotoImage(
         file=relative_to_assets("button_6.png"))
-    button_triste = Button(
-        image=button_image_triste,
+    button_comida = Button(
+        image=button_image_comida,
         borderwidth=0,
         highlightthickness=0,
-        command=set_triste,
+        command=set_comida,
         relief="flat"
     )
-    button_triste.place(
+    button_comida.place(
         x=357.0,
         y=233.0,
         width=94.0,
         height=95.0
     )
 
-    button_image_surpreso = PhotoImage(
+    button_image_ajuda = PhotoImage(
         file=relative_to_assets("button_7.png"))
-    button_surpreso = Button(
-        image=button_image_surpreso,
+    button_ajuda = Button(
+        image=button_image_ajuda,
         borderwidth=0,
         highlightthickness=0,
-        command=set_surpreso,
+        command=set_ajuda,
         relief="flat"
     )
-    button_surpreso.place(
+    button_ajuda.place(
         x=163.0,
         y=233.0,
         width=94.0,
         height=95.0
     )
 
-    button_image_estressado = PhotoImage(
+    button_image_dor = PhotoImage(
         file=relative_to_assets("button_8.png"))
-    button_estressado = Button(
-        image=button_image_estressado,
+    button_dor = Button(
+        image=button_image_dor,
         borderwidth=0,
         highlightthickness=0,
-        command=set_estressado,
+        command=set_dor,
         relief="flat"
     )
-    button_estressado.place(
+    button_dor.place(
         x=163.0,
         y=397.0,
         width=94.0,
         height=95.0
     )
 
-    button_image_apaixonado = PhotoImage(
+    button_image_descanso = PhotoImage(
         file=relative_to_assets("button_9.png"))
-    button_apaixonado = Button(
-        image=button_image_apaixonado,
+    button_descanso = Button(
+        image=button_image_descanso,
         borderwidth=0,
         highlightthickness=0,
-        command=set_apaixado,
+        command=set_descanso,
         relief="flat"
     )
-    button_apaixonado.place(
+    button_descanso.place(
         x=357.0,
         y=397.0,
         width=94.0,
         height=95.0
     )
 
-    button_image_enjoado = PhotoImage(
+    button_image_atividade = PhotoImage(
         file=relative_to_assets("button_10.png"))
-    button_enjoado = Button(
-        image=button_image_enjoado,
+    button_atividade = Button(
+        image=button_image_atividade,
         borderwidth=0,
         highlightthickness=0,
-        command=set_enjoado,
+        command=set_atividade,
         relief="flat"
     )
-    button_enjoado.place(
+    button_atividade.place(
         x=547.0,
         y=397.0,
         width=94.0,
         height=95.0
     )
 
-    button_image_indignado = PhotoImage(
+    button_image_comunicacao = PhotoImage(
         file=relative_to_assets("button_11.png"))
-    button_indignado = Button(
-        image=button_image_indignado,
+    button_comunicacao = Button(
+        image=button_image_comunicacao,
         borderwidth=0,
         highlightthickness=0,
-        command=set_indignado,
+        command=set_comunicacao,
         relief="flat"
     )
-    button_indignado.place(
+    button_comunicacao.place(
         x=750.0,
         y=397.0,
         width=94.0,
@@ -396,7 +396,7 @@ def open_expressions_window():
         image=button_image_navigate_back,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: navigate_to_home(expressions_window),
+        command=lambda: navigate_to_home(needs_window),
         relief="flat"
     )
     button_navigate_back.place(
@@ -406,8 +406,8 @@ def open_expressions_window():
         height=77.0
     )
 
-    expressions_window.resizable(False, False)
-    expressions_window.mainloop()
+    needs_window.resizable(False, False)
+    needs_window.mainloop()
     
 # Função para voltar para janela Home
 def navigate_to_home(current_window):

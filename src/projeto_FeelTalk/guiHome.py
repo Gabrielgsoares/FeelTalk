@@ -254,7 +254,7 @@ def open_home_window():
         image=button_image_necessidade,
         borderwidth=0,
         highlightthickness=0,
-        command=lambda: print("button_necessidade clicked"),
+        command=lambda: navigate_to_needs(home_window),
         relief="flat"
     )
     button_necessidade.place(
@@ -320,3 +320,8 @@ def navigate_to_expressions(current_window):
     current_window.destroy()
     import guiExpressions
     guiExpressions.open_expressions_window()
+    
+def navigate_to_needs(current_window):
+    current_window.destroy()
+    import guiNeeds
+    guiNeeds.open_needs_window()

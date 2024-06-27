@@ -258,8 +258,8 @@ def open_expressions_window():
     button_erase.place(
         x=805.0,
         y=98.0,
-        width=77.0,
-        height=78.0
+        width=76.0,
+        height=76.0
     )
 
     button_image_speak = PhotoImage(

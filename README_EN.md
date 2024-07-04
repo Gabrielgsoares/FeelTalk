@@ -1,7 +1,7 @@
 
 # FeelTalk Project
 
-[Click here](README_PT.md) for the Portuguese version of this README.
+[Click here](README.md) for the Portuguese version of this README.
 
 ## Introduction
 
